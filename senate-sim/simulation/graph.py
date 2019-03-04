@@ -7,6 +7,7 @@ __location__ = pathlib.Path(__file__)
 
 def draw_graph(loop_count, topic, connections):
     G = nx.Graph()
+    print("################{}###################".format(loop_count))
     for con in connections:
         G.add_node(str(con.p1.first_name), color=con.p1.party)
         G.add_node(str(con.p2.first_name))
@@ -45,7 +46,7 @@ def colorize(bond):
 
 def colorize_option(option):
     options = {
-        None: "r",
+        None: "y",
         True: "g",
         False: "r"
     }
