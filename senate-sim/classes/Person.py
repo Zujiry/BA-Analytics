@@ -5,8 +5,8 @@ class Person:
     # party - Political party of the person
     # knowledge - Pool of Knowledge of the person
     # charisma - Charisma of the person, 1-100
-    def __init__(self, id, first_name, name, party, birthdate, knowledge, charisma):
-        self.id = id,
+    def __init__(self, number, first_name, name, party, birthdate, knowledge, charisma):
+        self.number = number,
         self.first_name = first_name
         self.name = name
         self.party = party
@@ -14,27 +14,12 @@ class Person:
         self.knowledge = knowledge
         self.charisma = charisma
         self.topic = None
-        self.option = None
+        self.opinion = None
 
-    # return chosen option to topic
-    def form_opinion(self, topic, option):
+    # return chosen opinion to topic
+    def form_opinion(self, topic, opinion):
         self.topic = topic
-        self.option = option
-
-    def convince(self, option, charisma_bonus, knowledge, bond):
-        if self.option.value is option.value:
-            self.option.conviction += ((charisma_bonus + bond)/10) > 100
-            if self.option.conviction > 100:
-                self.option.conviction = 100
-        else:
-            conviction = (charisma_bonus/10)
-            for key, value in knowledge.items():
-                if value > 0:
-                    conviction += (value/10)
-            change = self.option.conviction - conviction
-            if change < 15:
-                self.option.value = option.value
-                self.option.conviction = 35
+        self.opinion = opinion
 
     def interact(self, person, bond):
         log_string = "Interaction: {} {} interacting with {} {}".format(
@@ -60,7 +45,25 @@ class Person:
 
         for k, v in known.items():
             person.knowledge.influence(k, v, bond)
-        person.convince(self.option, charisma_bonus, known, bond)
+        person.convince(self.opinion, charisma_bonus, known, bond)
+
+    def convince(self, opinion, charisma_bonus, knowledge, bond):
+        if self.opinion.value is opinion.value:
+            self.opinion.conviction += ((charisma_bonus + bond) / 10)
+            if self.opinion.conviction > 100:
+                self.opinion.conviction = 100
+        else:
+            conviction = (charisma_bonus / 10)
+            for key, value in knowledge.items():
+                if value > 0:
+                    conviction += (value / 10)
+            change = self.opinion.conviction - conviction
+            if change < 15:
+                self.opinion.value = opinion.value
+                self.opinion.conviction = 35
+            else:
+                self.opinion.conviction = change
 
     def __str__(self):
-        return "Person {} {}\nParty {}\nKnowledge {}".format(str(self.first_name), self.name, str(self.party), str(self.knowledge))
+        return "Person {} {}\nParty {}\nKnowledge {}".format(
+            str(self.first_name), self.name, str(self.party), str(self.knowledge))

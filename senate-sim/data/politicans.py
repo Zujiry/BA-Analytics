@@ -6,7 +6,7 @@ politicians = {
     1: {
         "first_name": "Milan",
         "name": "Pein",
-        "party": "Red",
+        "party": "red",
         "born": date(1974, 1, 31),
         "charisma": 50,
         "knowledge": {
@@ -22,9 +22,6 @@ politicians = {
             "media": 20,
             "culture": 20
         },
-        "connections": {
-            2: 20
-        },
         "topics": {
             0: {
                 "value": True,
@@ -35,7 +32,7 @@ politicians = {
     2: {
         "first_name": "Richard",
         "name": "Seelmaecker",
-        "party": "Black",
+        "party": "grey",
         "born": date(1973, 2, 12),
         "charisma": 55,
         "knowledge": {
@@ -51,9 +48,6 @@ politicians = {
             "media": 55,
             "culture": 20
         },
-        "connections": {
-            3: 20
-        },
         "topics": {
             0: {
                 "value": True,
@@ -64,7 +58,7 @@ politicians = {
     3: {
             "first_name": "Peri",
             "name": "Arndt",
-            "party": "Red",
+            "party": "red",
             "born": date(1965, 1, 21),
             "charisma": 60,
             "knowledge": {
@@ -80,9 +74,6 @@ politicians = {
                 "media": 35,
                 "culture": 85
         },
-        "connections": {
-            1: 20
-        },
         "topics": {
             0: {
                 "value": True,
@@ -93,7 +84,7 @@ politicians = {
     4: {
             "first_name": "Hendrikje",
             "name": "Blandow-Schlegel",
-            "party": "Red",
+            "party": "red",
             "born": date(1961, 10, 11),
             "charisma": 52,
             "knowledge": {
@@ -109,9 +100,6 @@ politicians = {
                 "media": 35,
                 "culture": 25,
             },
-            "connections": {
-                1: 20
-            },
             "topics": {
                 0: {
                     "value": True,
@@ -122,7 +110,7 @@ politicians = {
     5: {
             "first_name": "Olaf",
             "name": "Steinbiss",
-            "party": "Red",
+            "party": "red",
             "born": date(1966, 11, 7),
             "charisma": 65,
             "knowledge": {
@@ -138,9 +126,6 @@ politicians = {
                 "media": 30,
                 "culture": 50,
             },
-            "connections": {
-                2: 20
-            },
             "topics": {
                 0: {
                     "value": False,
@@ -151,7 +136,7 @@ politicians = {
     6: {
             "first_name": "Urs",
             "name": "Tabbert",
-            "party": "Red",
+            "party": "red",
             "born": date(1971, 12, 5),
             "charisma": 25,
             "knowledge": {
@@ -167,9 +152,6 @@ politicians = {
                 "media": 30,
                 "culture": 30
             },
-            "connections": {
-                2: 20
-            },
             "topics": {
                 0: {
                     "value": True,
@@ -180,7 +162,7 @@ politicians = {
     7: {
             "first_name": "Henriette",
             "name": "von Enckevort",
-            "party": "Red",
+            "party": "red",
             "born": date(1980, 2, 25),
             "charisma": 42,
             "knowledge": {
@@ -196,9 +178,6 @@ politicians = {
                 "media": 20,
                 "culture": "45"
             },
-            "connections": {
-                2: 60
-            },
             "topics": {
                 0: {
                     "value": True,
@@ -209,7 +188,7 @@ politicians = {
     8: {
             "first_name": "Joachim",
             "name": "Lenders",
-            "party": "Black",
+            "party": "grey",
             "born": date(1961, 12, 6),
             "charisma": 73,
             "knowledge": {
@@ -225,9 +204,6 @@ politicians = {
                 "media": 20,
                 "culture": 24
             },
-            "connections": {
-                2: 20
-            },
             "topics": {
                 0: {
                     "value": True,
@@ -238,7 +214,7 @@ politicians = {
     9: {
             "first_name": "Carola",
             "name": "Timm",
-            "party": "Green",
+            "party": "green",
             "born": date(1969, 5, 6),
             "charisma": 57,
             "knowledge": {
@@ -254,9 +230,6 @@ politicians = {
                 "media": 30,
                 "culture": 30
             },
-            "connections": {
-                2: 20
-            },
             "topics": {
                 0: {
                     "value": False,
@@ -267,7 +240,7 @@ politicians = {
     10: {
             "first_name": "Martin",
             "name": "Dolzer",
-            "party": "Purple",
+            "party": "purple",
             "born": date(1966, 12, 23),
             "charisma": 30,
             "knowledge": {
@@ -283,9 +256,6 @@ politicians = {
                 "media": 40,
                 "culture": 27
             },
-            "connections": {
-                2: 20
-            },
             "topics": {
                 0: {
                     "value": False,
@@ -296,7 +266,7 @@ politicians = {
     11: {
             "first_name": "Anna-Elisabeth",
             "name": "von Treuenfels-Frowein",
-            "party": "Yellow",
+            "party": "yellow",
             "born": date(1962, 5, 13),
             "charisma": 45,
             "knowledge": {
@@ -312,9 +282,6 @@ politicians = {
                 "media": 22,
                 "culture": 31
             },
-            "connections": {
-                2: 20
-            },
             "topics": {
                 0: {
                     "value": True,
@@ -325,7 +292,7 @@ politicians = {
     12: {
             "first_name": "Dirk",
             "name": "Nockemann",
-            "party": "Orange",
+            "party": "orange",
             "born": date(1958, 5, 5),
             "charisma": 23,
             "knowledge": {
@@ -341,8 +308,6 @@ politicians = {
                 "media": 26,
                 "culture": 51
             },
-            "connections": {
-            },
             "topics": {
                 0: {
                     "value": None,
@@ -351,3 +316,84 @@ politicians = {
             }
         },
 }
+
+
+connections = [
+    # 1
+    [1, 2, 35],
+    [1, 3, 58],
+    [1, 4, 87],
+    [1, 5, 45],
+    [1, 6, 34],
+    [1, 7, 28],
+    [1, 8, 58],
+    [1, 9, 62],
+    [1, 10, 28],
+    [1, 11, 36],
+    [1, 12, 0],
+    # 2
+    [2, 3, 24],
+    [2, 4, 31],
+    [2, 5, 41],
+    [2, 6, 17],
+    [2, 7, 69],
+    [2, 8, 78],
+    [2, 9, 23],
+    [2, 10, 12],
+    [2, 11, 58],
+    [2, 12, 0],
+    # 3
+    [3, 4, 71],
+    [3, 5, 64],
+    [3, 6, 59],
+    [3, 7, 34],
+    [3, 8, 23],
+    [3, 9, 57],
+    [3, 10, 23],
+    [3, 11, 42],
+    [3, 12, 0],
+    # 4
+    [4, 5, 78],
+    [4, 6, 65],
+    [4, 7, 23],
+    [4, 8, 45],
+    [4, 9, 67],
+    [4, 10, 32],
+    [4, 11, 46],
+    [4, 12, 0],
+    # 5
+    [5, 6, 73],
+    [5, 7, 87],
+    [5, 8, 75],
+    [5, 9, 35],
+    [5, 10, 15],
+    [5, 11, 60],
+    [5, 12, 0],
+    # 6
+    [6, 7, 82],
+    [6, 8, 64],
+    [6, 9, 46],
+    [6, 10, 13],
+    [6, 11, 56],
+    [6, 12, 0],
+    # 7
+    [7, 8, 74],
+    [7, 9, 32],
+    [7, 10, 26],
+    [7, 11, 68],
+    [7, 12, 0],
+    # 8
+    [8, 9, 23],
+    [8, 10, 58],
+    [8, 11, 58],
+    [8, 12, 0],
+    # 9
+    [9, 10, 52],
+    [9, 11, 23],
+    [9, 12, 0],
+    # 10
+    [10, 11, 9],
+    [10, 12, 0],
+    # 11
+    [11, 12, 0],
+]

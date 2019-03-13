@@ -1,13 +1,13 @@
-from data.politicans import politicians
+from data.politicans import politicians, connections as cons
 from data.topics import topics
-from classes import Connection, Knowledge, Option, Topic, Person
+from classes import Connection, Knowledge, Opinion, Topic, Person
 
 import logging
 
 
 def initialize_topic(topic_id):
     topic = topics[topic_id]
-    option = Option()
+    option = Opinion()
     return Topic(
         topic_id,
         topic["name"],
@@ -42,17 +42,19 @@ def initialize_data(topic):
             new_knowledge,
             politician["charisma"],
         )
-        option = Option(
+        opinion = Opinion(
             value=politician["topics"][topic.id]["value"],
             conviction=politician["topics"][topic.id]["conviction"]
         )
-        new_person.form_opinion(topic, option)
+        new_person.form_opinion(topic, opinion)
         persons.append(new_person)
 
-    for key, value in politicians.items():
-        for number, bond in value["connections"].items():
-            new_connection = Connection(persons[key-1], persons[number-1], bond)
-            connections.append(new_connection)
+    for con in cons:
+        for p1 in persons:
+            for p2 in persons:
+                if p1.number[0] is con[0] and p2.number[0] is con[1]:
+                    new_connection = Connection(p1, p2, con[2])
+                    connections.append(new_connection)
 
     return connections
 

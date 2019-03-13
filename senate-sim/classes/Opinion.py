@@ -1,7 +1,7 @@
 import logging
 
 
-class Option:
+class Opinion:
     options = [True, False, None]
 
     def __init__(self, value=0, conviction=0):

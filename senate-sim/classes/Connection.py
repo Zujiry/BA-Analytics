@@ -8,11 +8,13 @@ class Connection:
         self.p2 = politicanB
         self.bond = bond
 
-    def interact(self):
-        self.p1.interact(self.p2, self.bond)
-        self.p2.interact(self.p1, self.bond)
-        # knowledge + charisma + bond in a mix
-        # more knowledge -> more influence?
+    def interact(self, loop):
+        if loop % 2 is 0:
+            self.p1.interact(self.p2, self.bond)
+            self.p2.interact(self.p1, self.bond)
+        else:
+            self.p2.interact(self.p1, self.bond)
+            self.p1.interact(self.p2, self.bond)
 
     def __str__(self):
         return "{} \n{} \nBond: {}".format(self.p1, self.p2, self.bond)

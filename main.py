@@ -5,9 +5,13 @@ import logging
 
 # iterations
 # run through all connections
-def simulate(connections):
-    for connection in connections:
-        connection.interact()
+def simulate(loop, connections):
+    if loop % 2 is 0:
+        for connection in connections:
+            connection.interact(loop)
+    else:
+        for connection in reversed(connections):
+            connection.interact(loop)
     return connections
 
 
@@ -18,6 +22,6 @@ if __name__ == "__main__":
     i = 0
     while i < 3:
         logging.info("simulation Main Loop - Count " + str(i))
-        connections = simulate(connections)
+        connections = simulate(i, connections)
         draw_graph(i, topic, connections)
         i += 1
